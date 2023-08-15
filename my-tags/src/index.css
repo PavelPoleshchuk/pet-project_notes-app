@@ -33,12 +33,19 @@ body {
   overflow-y: scroll;
   position: relative;
 }
+.notes__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .notes__header input {
+  height: 2.6em;
   background: border-box;
   background-color: inherit;
-  border: 1px solid white;
+  border: 1px solid #4f4e4e;
   border-radius: 5px;
   padding: 5px;
+  color: white;
 }
 .notes__container {
   display: grid;
@@ -85,7 +92,7 @@ body {
 .btn {
   display: flex;
   align-self: center;
-  background: black;
+  background: #4f4e4e;
   border-radius: 0.6rem;
   padding: 0.3rem 0.5rem;
   font-size: 1.3rem;
