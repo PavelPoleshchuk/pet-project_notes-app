@@ -1,7 +1,7 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { INoteItem } from "../../data_notes";
+import { INoteItem } from "../../dataInterface";
 import { useState } from "react";
 import { useGetDateNow } from "../useGetDateNow";
 type IProps = {

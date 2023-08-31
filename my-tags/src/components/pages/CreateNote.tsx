@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { useState } from "react";
 import { useGetDateNow } from "../useGetDateNow";
-import { INoteItem } from "../../data_notes";
+import { INoteItem } from "../../dataInterface";
 type IProps = {
   setNotes: React.Dispatch<React.SetStateAction<INoteItem[]>>;
 };

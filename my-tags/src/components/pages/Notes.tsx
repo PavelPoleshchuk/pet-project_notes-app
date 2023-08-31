@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import { BsPlusLg } from "react-icons/bs";
 import { NoteItem } from "../NoteItem";
 import { Link } from "react-router-dom";
-import { INoteItem } from "../../data_notes";
+import { INoteItem } from "../../dataInterface";
 import { useEffect, useState } from "react";
 type IProps = {
   notes: INoteItem[];
@@ -17,11 +17,13 @@ export const Notes = ({ notes }: IProps) => {
   const handleSearch = () => {
     setFilteredNotes(
       notes.filter((item) => {
-        if (item.title.toLowerCase().match(title.toLocaleLowerCase())) {return item}
+        if (item.title.toLowerCase().match(title.toLocaleLowerCase())) {
+          return item;
+        }
       })
     );
   };
-  useEffect(handleSearch,[title])
+  useEffect(handleSearch, [title]);
 
   return (
     <section>
@@ -39,10 +41,11 @@ export const Notes = ({ notes }: IProps) => {
           />
         )}
         <button
+          className="btn notes__btn"
           onClick={() => {
             setShowSearch((prev) => !prev);
+            setTitle("");
           }}
-          className="btn notes__btn"
         >
           <CiSearch />
         </button>

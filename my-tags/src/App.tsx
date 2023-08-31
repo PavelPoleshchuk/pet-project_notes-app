@@ -3,11 +3,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Notes } from "./components/pages/Notes";
 import { CreateNote } from "./components/pages/CreateNote";
 import { EditNote } from "./components/pages/EditNote";
-import { INoteItem } from "./data_notes";
+import { INoteItem } from "./dataInterface";
 
 function App() {
   const [notes, setNotes] = useState<INoteItem[]>(
-    JSON.parse((localStorage.getItem("notes"))||'[]')
+    JSON.parse(localStorage.getItem("notes") || "[]")
   );
 
   useEffect(() => {
@@ -21,15 +21,13 @@ function App() {
           path="/create-note"
           element={<CreateNote setNotes={setNotes} />}
         />
-        <Route path="/edit-note/:id" element={<EditNote notes={notes} setNotes={setNotes}/>} />
+        <Route
+          path="/edit-note/:id"
+          element={<EditNote notes={notes} setNotes={setNotes} />}
+        />
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
-
-// const [tags, setTag] = useState<string[]>([]);
-//   const remakeTags = (arr:string[]) => setTag(arr)
-// <h1>Input some tags...</h1>
-//       <TagInput tags={tags} remakeTags={remakeTags}/>

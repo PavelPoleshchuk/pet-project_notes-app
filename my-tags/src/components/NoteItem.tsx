@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { INoteItem } from "../data_notes";
+import { INoteItem } from "../dataInterface";
 
 interface INoteItemProps {
   item: INoteItem;
