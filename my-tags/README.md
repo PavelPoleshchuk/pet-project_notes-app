@@ -1,6 +1,6 @@
 # React + TypeScript + Vite + React-Router-Dom + LocalStorage + Grid
 
-The code is based on the video. Added adaptation of the code on the vehicle.
+The code is based on the video. Added adaptation of the code on the TS.
 
 
 
