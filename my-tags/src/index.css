@@ -109,7 +109,7 @@ body {
   padding: 1rem;
   position: fixed;
   bottom: 4rem;
-  right: 7rem;
+  /* right: 7rem; */
 }
 .create-note__header {
   display: flex;

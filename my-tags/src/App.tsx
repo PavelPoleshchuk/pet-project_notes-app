@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Notes } from "./components/pages/Notes";
-import { CreateNote } from "./components/pages/CreateNote";
-import { EditNote } from "./components/pages/EditNote";
-import { INoteItem } from "./dataInterface";
+import { Notes } from "./pages/Notes";
+import { CreateNote } from "./pages/CreateNote";
+import { EditNote } from "./pages/EditNote";
+import { INoteItem } from "./types";
 
 function App() {
   const [notes, setNotes] = useState<INoteItem[]>(

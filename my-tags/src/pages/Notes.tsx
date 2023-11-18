@@ -1,9 +1,9 @@
 import * as React from "react";
 import { CiSearch } from "react-icons/ci";
 import { BsPlusLg } from "react-icons/bs";
-import { NoteItem } from "../NoteItem";
+import { NoteItem } from "../components/NoteItem";
 import { Link } from "react-router-dom";
-import { INoteItem } from "../../dataInterface";
+import { INoteItem } from "../types";
 import { useEffect, useState } from "react";
 type IProps = {
   notes: INoteItem[];
@@ -23,7 +23,7 @@ export const Notes = ({ notes }: IProps) => {
       })
     );
   };
-  useEffect(handleSearch, [title]);
+  useEffect(handleSearch, [notes, title]);
 
   return (
     <section>
